@@ -1,64 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+
 * {
-  margin: 0;
-  box-sizing: border-box;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body {
-  padding: 90px 20px 0;
-  font-family: "Montserrat", bold;
-  height:auto;
-  margin: 0;
-  background-image: url("porta2.jpg");
-  background-size: cover;
-  background-size: 25rem;
-  background-attachment: fixed;
+    font-family: "Montserrat", bold;
+    height: auto;
+    background-image: url("img/porta2.jpg");
+    background-size: cover;
+    background-size: 25rem;
+    background-attachment: fixed;
 }
 
-form#login-form {
-  background: #fff;
-  width: 40em;
-  margin: 2em auto;
-  overflow: hidden;
-  position: relative;
-  }
-  .heading {
-    background: #00bba7;
-    color: #fff;
+.login-todo{
+    align-content: space-between;
+    display: flex;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 140px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+.linea{
+	align-content: space-between;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	text-align: center;
+}
+.lao{
+	width:  10%;
+	color: #5F5F5F;
+}
+.elform {
+	background: #FFFFFF;
+	padding: 40px;
+	margin-left: 30px;
+	width: auto;
+		   border-radius: 10px;
+	text-align: center;
+}
+.imag{
+}
+.datos{
+	align-content: center;
+	text-align: center;
+	align-items: center;
+}
+
+  .login-todo input[type="text"], input[type="password"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 7px;
     text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    padding: 1.5em;
-    font-size: 1.1em;
-  }
-  
- .left {
-    width: 45%;
-    float: left;
-    padding: 1.7em 1.5em 2.5em 1.5em;
-  }
-  
- .right {
-    width: 45%;
-    float: right;
-    padding: 1.7em 1.5em 2.5em 1.5em;
-    
-  }
-  label {
-    display: inline-block;
-    color: gray;
-    font-size: 1.1em;
-    margin-top: 0.6em;
-  }
-    
-  input[type="email"], input[type="password"] {
-    border: 0.1em solid darken(#eee, 6%);
-    padding: 1em;
-    margin: 0.6em 0;
-    max-width: 88.5%;
+    border: 2px solid #5F5F5F;
+    padding: 10px 7px;
+    width: 250px;
+    outline: none;
+    color: black;
+    border-radius: 10px;
+    transition: 0.25s;
 }
   
-  input[type="submit"] {
+  input[type="submit"], .btn-iniciar-sesion, .btn-registrarse {
     background: #f85f64;
+	  width: 250px;
     color: #fff;
     outline: none;
     text-transform: uppercase;
@@ -66,56 +76,191 @@ form#login-form {
     overflow: hidden;
     border: none;
     letter-spacing: 0.1em;
-    margin: 0.5em 0;
+    margin: 10px;
     font-weight: bold;
+	  border-radius: 10px;
+  }
+ .btn-iniciar-sesion:hover, .btn-registrarse:hover {
+      background: #F52C33;
+}
+ .btn-iniciar-sesion:active, .btn-registrarse:active {
+      background: #00bba7;
+}
+
+  .nomenus {
+    color: ;
+    margin-top: 10px;
+    width: 120px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 14px;
+	 
+
+    }
+
+    .nomenu {
+display: inline-block;
+position: relative;
+color: #5F5F5F;
+text-decoration: none;
+}
+.nomenu:after {
+content: "";
+display: block;
+margin: auto;
+height: 2px;
+width: 0px;
+transition: all .8s;
+}
+.nomenu:hover:after {
+width: 100%;
+background: #5F5F5F;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+
+.cuenta{
+	    background: #00bba7;
+	  width: 250px;
+    color: #fff;
+    outline: none;
+    text-transform: uppercase;
+    padding: 1.2em;
+    overflow: hidden;
+    border: none;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+	  border-radius: 10px;
+}
+ .cuenta:hover {
+      background: #009988;
+}
+ .cuenta:active {
+      background: #f85f64;
+}
+/* color aqua    #00bba7  
+    color rosalo  #f85f64
+grayy #5F5F5F
+*/
+
+/*
+registro del login2.php
+*/
+
+.logoletra, .nombre-completo{
+	 align-content: space-between;
+    display: flex;
+}
+.centrio-registro{
+    width: 30%;
+    align-items: center;
+    display: flex;
+    text-align: center;
+
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 500px;
+    padding-bottom: 20px;
+}
+.datos-registro{
+	align-content: center;
+	text-align: center;
+	align-items: center;
+}
+
+.elform-registro {
+	background: #FFFFFF;
+	padding: 40px;
+	width: auto;
+    border-radius: 10px;
+	text-align: center;
+}
+
+  .centrio-registro input[type="text"], input[type="password"], input[type="date"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 7px;
+    text-align: center;
+    border: 2px solid #5F5F5F;
+    padding: 10px 7px;
+    width: 250px;
+    outline: none;
+    color: black;
+    border-radius: 10px;
+    transition: 0.25s;
+}
+
+
+.imag img{
+    width: 470px;
+    height: 470px;
+}
+
+/* el responsive */
+@media (max-width: 700px){
+    .login-todo{
+        display: block;
+        margin: auto;
+           padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    }
+
+    .imag img{
+        width: 400px;
+        height: 400px;
+    }
+
+    .datos{
+        text-align: center;
+    }
+
+     .login-todo input[type="text"], input[type="password"] {
+    border: 0;
+    background: none;
+    display: flex;
+    margin: 7px;
+    text-align: center;
+    border: 2px solid #5F5F5F;
+    padding: 10px 7px;
+    width: 100%;
+    outline: none;
+    color: black;
+    border-radius: 10px;
+    transition: 0.25s;
+}
+  
+  input[type="submit"], .btn-iniciar-sesion, .btn-registrarse {
+    background: #f85f64;
+      width: 100%;
+    color: #fff;
+    outline: none;
+    text-transform: uppercase;
+    padding: 1.2em;
+    overflow: hidden;
+    border: none;
+    letter-spacing: 0.1em;
+    margin: auto;
+    font-weight: bold;
+      border-radius: 10px;
   }
 
-div.right {
-  
-  div.connect {
-    color: gray;
-    font-size: 1.1em;
+  .centrio-registro{
+    width: 30%;
+    align-items: center;
+    display: flex;
     text-align: center;
-  }
-  
-  a {
-    display: inline-block;
-    font-size: 1.5em;
-    text-decoration: none;
-    color: white;
-    width: 9em;
-    padding: 0.55em 0.3em;
-    clear: both;
-    text-align: center;    
-    margin: 0.5em 0.1em;
-    
-  }
-  
-  a.facebook {
-    background: #3a589a;
-    margin-top: 0.8em;
-    transition(0.15s all ease-in-out);
-    
-    &:hover {
-      background: rgba(#3a589a, 0.8);
-    }
-  }
-  
-  a.twitter {
-    background: #4099ff;
-   transition(0.15s all ease-in-out);
-    
-    &:hover {
-      background: rgba(#4099ff, 0.8);
-    }
-  }
-  
-  a.google-plus {
-    background: #e9544f;
-    @include transition(0.15s all ease-in-out);
-    
-    &:hover {
-      background: rgba(#e9544f, 0.8);
-    }
-  }
+    margin: auto;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+
+
 }

@@ -5,15 +5,18 @@
 
     include 'conexion.php';
 
-    $correo = $_POST['correo'];
+    $usuario = $_POST['usuario'];
+
     $contrasena = $_POST['contrasena'];
     $contrasena = hash('sha512', $contrasena);
 
-    $valida_login = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo='$correo' and clave='$contrasena'");
+    $valida_login = mysqli_query($conexion, "SELECT * FROM usuarios WHERE usuario='$usuario' and clave='$contrasena'");
+    $dato = $valida_login->fetch_assoc();
 
     if (mysqli_num_rows($valida_login) > 0) {
-    	$_SESSION['usuario'] = $correo;
-    	header("location: ../menu.php");
+    	$_SESSION['usuario'] = $usuario;
+        $_SESSION['id'] = $dato['id'];
+    	header("location: ../sesion_iniciada/menu.php");
         exit;
 
     }else{

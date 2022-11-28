@@ -7,11 +7,11 @@
    $usuario = $_POST['usuario'];
    $correo = $_POST['correo'];
    $contrasena = $_POST['password'];
-   $fecha_nacimiento = $_POST['born'];
+
    $contrasena = hash('sha512', $contrasena);
 
-   $query = "INSERT INTO usuarios(nombre, apellido, usuario, correo, clave, fecha_nacimiento) 
-   VALUES ('$nombre','$apellido','$usuario','$correo','$contrasena','$fecha_nacimiento')";
+   $query = "INSERT INTO usuarios(nombre, apellido, usuario, correo, clave, fecha) 
+   VALUES ('$nombre','$apellido','$usuario','$correo','$contrasena', now())";
 
 // verifica correos repetidos
    $verification = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo='$correo' ");

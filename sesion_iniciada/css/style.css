@@ -1,0 +1,691 @@
+/**Barra de navegacion y enlaces*/
+header{
+    min-height: 40px;
+    align-items: center;
+    padding: 0px;
+    background-color: #1C2050;
+    position: fixed;
+    top: 0; 
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+   height: var(--header-height);
+    transition: transform 0.2s;
+        transition: top 1s;
+}
+* {
+				margin:0px;
+				padding:0px;
+			}
+.subtem:hover{
+	display: block;
+}
+
+ a{
+	text-decoration: none;
+	color: white;
+	font-family:  "Montserrat", bold;
+	 
+}
+nav a {
+display: inline-block;
+position: relative;
+color: #00bba7;
+text-decoration: none;
+}
+nav a:after {
+content: "";
+display: block;
+margin: auto;
+height: 2px;
+width: 0px;
+transition: all .8s;
+	color: #00bba7;
+}
+nav a:hover:after {
+width: 100%;
+background: #00bba7;
+	color: #00bba7;
+}
+
+
+.blancas{
+    font-size: 40px;
+    margin-top: 10px;
+}
+.user{
+margin-right: 20px;
+color: white;
+}
+.uno{
+	padding: 0;
+	margin: 0;
+	background: #FFFFFF
+}
+
+.imguno{
+	width: 40px;
+	height: 40px;
+}
+.cerrar{
+	display: block;
+	background-color:#F90 ;
+	font-weight: 600;
+	padding-right: 10px;
+	font-family: "Montserrat", bold ;
+	font-size: 20px;
+    padding: 12px 16px;
+    text-decoration: none;
+    -moz-border-radius: 7px;
+-webkit-border-radius: 7px;
+
+}
+.enla {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    color: black;
+}
+nav{
+	background: #FFFFFF;
+}
+.nav{
+	  align-items: center;
+    display: flex;
+    justify-content: space-between;
+	max-width: 999px;
+    margin: 0 auto;
+    background: #FFFFFF;
+
+}
+.sesion{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    background: #1C2050;
+    margin-right: 0;
+    height: 30px;
+}
+.sess{
+	display: flex;
+	align-items: center;
+		font-weight: 600;
+	padding-right: 60px;
+}
+.sess img{
+	height: 50px;
+	margin-right: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.logo{
+	display: flex;
+	align-items: center;
+	font-size: 16px;
+	font-family: "Montserrat", bold;
+	color: white;
+}
+.logo img{
+	height: 50px;
+	margin-right: 10px;
+}
+body{
+    font-family: "Montserrat", bold;
+    height: auto;
+    background: #E7E7E7;
+}
+
+.header--hidden {
+  transform: translateY(calc(-1 * var(--nav-height)));
+  box-shadow: none;
+}
+
+ .nav-link  {
+	font-weight: 800px;
+	padding-right: 10px;
+	font-family: "Montserrat", bold ;
+	font-size: 24px;
+	display: block;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ .cerrar:hover {
+	color: black;
+    background: #00bba7;
+}
+.cerrar:active{
+	background-color: #D2386C;
+}
+
+
+.user2{
+	display: block;
+	align-content: center;
+}
+
+.fotolo {
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+
+.aprende-img{
+    width: 150px;
+    height: 150px;
+}
+.libros-tit{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding: 20px;
+}
+.elsider{
+    height: 500px;
+    width: 350px;
+}
+
+
+.slider{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slides{
+  width: 500%;
+  height: 100%;
+  display: flex;
+}
+
+.slides input{
+  display: none;
+}
+
+.slide{
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img{
+  width: 100%;
+  height: 100%;
+}
+
+/*css for manual slide navigation*/
+
+.navigation-manual{
+  position: absolute;
+  width: 100%;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn{
+  border: 2px solid #40D3DC;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+  background: #40D3DC;
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+  margin-left: -60%;
+}
+
+/*css for automatic navigation*/
+
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+}
+
+.navigation-auto div{
+  border: 2px solid #40D3DC;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: #40D3DC;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background: #40D3DC;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background: #40D3DC;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background: #40D3DC;
+}
+/* resto */
+.cuadroblanco {
+	background-color: white;
+	width: 90%;
+	text-align: center;
+	 margin-left: auto;
+margin-right: auto;
+margin-top:132px;
+}
+
+  .carousel {
+            position: relative;
+            box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+            margin-top: 26px;
+           
+        }
+
+        .carousel-inner {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .carousel-open:checked + .carousel-item {
+            position: static;
+            opacity: 100;
+        }
+
+        .carousel-item {
+            position: absolute;
+            opacity: 0;
+            -webkit-transition: opacity 0.6s ease-out;
+            transition: opacity 0.6s ease-out;
+            z-index: 3;
+        }
+
+        .carousel-item img {
+            display: block;
+            height: auto;
+            max-width: 100%;
+        }
+
+        .carousel-control {
+            background: rgba(0, 0, 0, 0.28);
+            border-radius: 50%;
+            color: #fff;
+            cursor: pointer;
+            display: none;
+            font-size: 40px;
+            height: 40px;
+            line-height: 35px;
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translate(0, -50%);
+            cursor: pointer;
+            -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+            text-align: center;
+            width: 40px;
+            z-index: 10;
+        }
+
+        .carousel-control.prev {
+            left: 2%;
+        }
+
+        .carousel-control.next {
+            right: 2%;
+        }
+
+        .carousel-control:hover {
+            background: rgba(0, 0, 0, 0.8);
+            color: #aaaaaa;
+        }
+
+        #carousel-1:checked ~ .control-1,
+        #carousel-2:checked ~ .control-2,
+        #carousel-3:checked ~ .control-3 {
+            display: block;
+        }
+
+        .carousel-indicators {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            bottom: 2%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .carousel-indicators li {
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        .carousel-bullet {
+            color: #fff;
+            cursor: pointer;
+            display: block;
+            font-size: 55px;
+        }
+
+        .carousel-bullet:hover {
+            color: #333;
+        }
+
+        #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+        #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+        #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+            color: #333;
+        }
+
+        #title {
+            width: 100%;
+            position: absolute;
+            padding: 0px;
+            margin: 0px auto;
+            text-align: center;
+            font-size: 27px;
+            color: rgba(255, 255, 255, 1);
+            font-family: 'Open Sans', sans-serif;
+            z-index: 9999;
+            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+        }
+
+
+
+
+
+
+.frass {
+    background-image: url(../../img/porta.jpg);
+    color: white;
+}
+.subtem {
+    list-style: none;
+    display: none;
+    position: absolute;
+    min-width: 140px;
+}
+
+
+
+/* parte funcional menu submenu subsubmenu */
+
+			ul, ol {
+				list-style:none;
+				
+				
+			}
+			
+			.nav > li {
+				float:left;
+			     justify-content: space-between;
+                 align-items: center;
+               
+				   transition: all .5s ease; 
+			}
+.nav li a:hover{
+ color: #00bba7;
+}
+			.nav li a {
+				background-color:#fff;
+				color:#000;
+				text-decoration:none;
+				 padding: 14px 16px;
+				display:block;
+				font-weight: 800px;
+	padding-right: 10px;
+	font-family: "Montserrat", bold ;
+	font-size: 28px;
+			}
+			
+			.nav li a:active {
+				color: #00bba7;
+			}
+			
+			.nav li ul {
+				display:none;
+				position:absolute;
+				min-width:10px;
+			}
+			
+			.nav li:hover > ul {
+				display:block;
+			}
+			
+			.nav li ul li {
+				position:relative;
+				display: block;
+				z-index: 2;
+			}
+			
+			.nav li ul li ul {
+				right:-180px;
+				top:0px;
+	
+}
+
+
+/* El diseno del buscador  */
+.search input[type=text]:hover{
+	 border-color: #00bba7;
+}
+ .search input[type=text]{
+            width:300px;
+            height:30px;
+            border-radius:25px;
+            border: 0;
+	 text-align: center;
+    transition: 0.25s;
+	 border: 2px solid #000000;
+        }
+          
+        .search{
+            float:right;
+            margin:7px;
+			align-items: center;
+			align-content: center;
+  
+        }
+          
+        .search button{
+            background-color: #000000;
+            color: white;
+            float: right;
+            padding: 5px 10px;
+            margin-right: 16px;
+            font-size: 12px;
+            border: none;
+            cursor: pointer;
+        } 
+
+.form-box input[type="text"]:focus {
+    width: 370px;
+    border-color: #00bba7;
+}
+
+/* Parte del footer */
+.pie{
+	align-items: center;
+}
+
+.pie2{
+    background: #1C2050;
+    color: white;
+    padding: 20px;     
+    text-align: center;
+}
+.pie1{
+    background: #29337B;
+	display: flex;
+	justify-content: space-between;
+	color: white;
+	padding: 20px;
+}
+.pie-12{
+    padding: 15px;
+    text-align: center;
+	width: 40%;
+	
+}
+.pie-13{
+    width: 30%;
+    align-content: center;
+    text-align: center;
+}
+.pie-11{
+    width: 30%;
+}
+.pie-redes img{
+	padding: 15px;
+	width: 40px;
+	height: 40px;
+}
+p{
+	align-items: center;
+}
+
+
+
+/*Diseno responsive*/
+@media (max-width: 860px){
+	header{
+		flex-direction: colomn;
+	}
+
+	nav{
+		padding: 10px 0px;
+		
+	}
+	.cuadroblanco{
+		margin-top: 200px;
+	}
+	nav a{
+		font-size: 10px;
+	font-family: "Montserrat", bold;
+	color: white;
+
+	}
+	.sesion{
+		
+	}
+	.search input[type=text]{
+            width:150px;
+            height:30px;
+            border-radius:20px;
+            border: 0;
+	 text-align: center;
+    transition: 0.25s;
+	 border: 2px solid #000000;
+        }
+        .form-box input[type="text"]:focus {
+    width: 150px;
+    border-color: #00bba7;
+}
+       .search{
+            float:right;
+            margin:7px;
+			align-items: center;
+			align-content: center;
+  
+        }
+          
+        .search button{
+            background-color: #000000;
+            color: white;
+            float: right;
+            padding: 5px 10px;
+            margin-right: 16px;
+            font-size: 10px;
+            border: none;
+            cursor: pointer;
+        } 
+.sess img{
+	height: 30px;
+	margin-right: 10px;
+}
+.user{
+margin-right: 10px;
+}
+.cerrar{
+	padding-right: 10px;
+	font-size: 15px;
+    padding: 12px 16px;
+}
+}
+
+
+@media (max-width: 680px){
+	header{
+		flex-direction: colomn;
+	}
+
+	nav{
+		padding: 10px 0px;
+		
+	}
+
+	.h1{
+		font-size: 11px;
+	}
+	.user{ font-size: 14px; }
+	.cuadroblanco{
+		margin-top: 170px;
+	}
+	.cerrar{
+	padding-right: 10px;
+	font-size: 12px;
+    padding: 12px 16px;
+}
+.nav li a {
+	padding-right: 10px;
+	font-size: 15px;
+			}
+
+.nav li ul li ul {
+				right:-120px;
+				top:0px;
+	
+}
+
+
+
+}
+
+
+
+

@@ -2,8 +2,9 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="logincss.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@700&display=swap" rel="stylesheet">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>
 <title>REGISTRO-TELOCREO</title>
@@ -13,7 +14,7 @@
 	
 <div class="centrio-registro">
     <form action="php/registro_usuario.php" method="POST" class="elform-registro">
-      <div class="logoletra"><img src="firma.png" width="50" height="50" alt=""/>
+      <div class="logoletra"><img src="img/firma.png" width="50" height="50" alt=""/>
   <h1>TELOCREO</h1>
       </div>
 		
@@ -30,9 +31,9 @@
         <input type="text" name="correo" id="" placeholder="Correo"> 
        
         <input type="password" name="password" id="pass" placeholder="Contraseña" autocomplete="new-password" autocorrect="off">
-        <h2>Fecha de nacimiento</h2>
+        <!--   <h2>Fecha de nacimiento</h2>
        
-        <input type="date" name="born" id="" placeholder="Fecha de nacimiento">
+     <input type="date" name="born" id="" placeholder="Fecha de nacimiento">-->
         <button class="btn-registrarse">REGISTRARSE</button>
       </div>
       <div class="linea">
@@ -42,15 +43,9 @@
          </div>
 		   <hr color="#5F5F5F" size="3px" width="40%" /> 
 		</div>
-		   <a href="" class="facebook">
-<!--       <span class="fontawesome-facebook"></span> -->
-      <i class="fa fa-facebook"  style="font-size: 18px; background:#3a589a; width: 20px; color: white; margin-right: 5px;" ></i>Iniciar sesión con Facebook
-    </a> 
-		<br/><br/>  <hr color="#5F5F5F" size="3px" />
-		
 		  <div class="regiss">
 			  <h3>¿Ya tienes una cuenta?</h3><br>
-			  <a class="cuenta" href="login1.php">Iniciar Sesión</a>
+			  <a class="cuenta" href="index.php">Iniciar Sesión</a>
 		</div>
 		
     </form> 

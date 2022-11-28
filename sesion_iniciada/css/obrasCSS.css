@@ -1,13 +1,17 @@
 /**Barra de navegacion y enlaces*/
 header{
-    min-height: 70px;
+    min-height: 40px;
     align-items: center;
     padding: 0px;
-    background-color: rgba(0,0,0,1.00);
+    background-color: #1C2050;
     position: fixed;
-    top: 0;
+    top: 0; 
     width: 100%;
     font-family: 'Roboto', sans-serif;
+   height: var(--header-height);
+    transition: transform 0.2s;
+        transition: top 1s;
+
 }
 * {
 				margin:0px;
@@ -36,10 +40,12 @@ margin: auto;
 height: 2px;
 width: 0px;
 transition: all .8s;
+color: #00bba7;
 }
 nav a:hover:after {
 width: 100%;
 background: #00bba7;
+color: #00bba7;
 }
 .blancas{
     font-size: 40px;
@@ -49,7 +55,6 @@ background: #00bba7;
 .user{
 margin-right: 20px;
 color: white;
-
 }
 .uno{
 	padding: 0;
@@ -64,7 +69,7 @@ color: white;
 }
 .cerrar{
 	display: block;
-	background-color:#00bba7 ;
+	background-color:#F90 ;
 	font-weight: 600;
 	padding-right: 10px;
 	font-family: "Montserrat", bold ;
@@ -73,6 +78,7 @@ color: white;
     text-decoration: none;
     -moz-border-radius: 7px;
 -webkit-border-radius: 7px;
+
 }
 .enla {
     align-items: center;
@@ -93,6 +99,7 @@ nav{
 	max-width: 999px;
     margin: 0 auto;
     background: #FFFFFF;
+
 }
 .sesion{
     justify-content: space-between;
@@ -100,8 +107,9 @@ nav{
     display: flex;
     width: 100%;
     padding: 10px;
-    background: #000000;
+    background: #1C2050;
     margin-right: 0;
+    height: 30px;
 }
 .sess{
 	display: flex;
@@ -112,6 +120,8 @@ nav{
 .sess img{
 	height: 50px;
 	margin-right: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
 }
 .logo{
 	display: flex;
@@ -127,7 +137,12 @@ nav{
 body{
     font-family: "Montserrat", bold;
     height: auto;
-    background: #E7E7E7;
+    background:#D3F7FF;
+}
+
+.header--hidden {
+  transform: translateY(calc(-1 * var(--nav-height)));
+  box-shadow: none;
 }
 
  .nav-link  {
@@ -144,47 +159,26 @@ body{
 
  .cerrar:hover {
 	color: black;
+	background: #00bba7;
 }
 .cerrar:active{
 	background-color: #D2386C;
 }
-nav a:hover {
-	background-color: rgba(0, 0, 0, .6);
-}
-nav a:active {
-    color: #101010;
-    text-decoration: none;
-}
 
 
-/* resto */
+
+/* CONTENIDO DENTRO DEL CUADRO BLANCO */
 .cuadroblanco {
 	background-color: white;
 	width: 90%;
 	text-align: center;
 	 margin-left: auto;
 margin-right: auto;
-margin-top:158px;
+margin-top:132px;
 }
 
-
-
-@media (max-width: 700px){
-	header{
-		flex-direction: colomn;
-	}
-
-	nav{
-		padding: 10px 0px;
-		
-	}
-	.cuadroblanco{
-		margin-top: 270px;
-	}
-
-}
 .frass {
-    background-image: url(porta.jpg);
+    background-image: url(../../img/porta.jpg);
     color: white;
 }
 .subtem {
@@ -194,8 +188,85 @@ margin-top:158px;
     min-width: 140px;
 }
 
+.grande{
+	font-size: 40px;
+}
+
+.aprende-titulo{
+	background: #29337B;
+	display: flex;
+	justify-content: space-between;
+	color: white;
+	padding: 15px 25px;
+	align-items: center;
+}
+.aprende-img{
+	width: 150px;
+	height: 150px;
+}
+.aprende-sub{
+	text-align: center;
+}
+.aprende-sub hr{
+	color: #00bba7;
+	width: 100%;
+	align-items: center;
+	border-color: #F90;
+}
+.aprende-sub h1{
+	 border-bottom: 3px solid #f90;
+}
+
+@media (max-width: 980px){
+	.aprende-img{
+	width: 100px;
+	height: 100px;
+}
+.grande{
+	font-size: 28px;
+}
+.aprende-sub h1{
+	font-size: 16px;
+}
+.aprende-sub h3{
+	font-size: 14px;
+}
+.aprende-titulo{
+	padding: 15px 15px;
+}
+
+}
+
+@media (max-width: 800px){
+.obra-uno h2{
+	font-size: 16px;
+}
+.obra-uno h4{
+	font-size: 13px;
+}
+}
+@media (max-width: 680px){
+	.aprende-titulo{
+		display: block;
+	}
+	.grande{
+	font-size: 40px;
+}
+.aprende-sub h1{
+	font-size: 28px;
+}
+.aprende-sub h3{
+	font-size: 20px;
+}
+
+}
 
 
+
+/* parte funcional menu submenu subsubmenu */
+.nav li a:hover{
+	color: #00bba7;
+   }
 			ul, ol {
 				list-style:none;
 				
@@ -219,11 +290,11 @@ margin-top:158px;
 				font-weight: 800px;
 	padding-right: 10px;
 	font-family: "Montserrat", bold ;
-	font-size: 24px;
+	font-size: 28px;
 			}
 			
-			.nav li a:hover {
-				
+			.nav li a:active {
+				color: #00bba7;
 			}
 			
 			.nav li ul {
@@ -247,12 +318,14 @@ margin-top:158px;
 	
 }
 
+
+/* El diseno del buscador  */
 .search input[type=text]:hover{
 	 border-color: #00bba7;
 }
  .search input[type=text]{
             width:300px;
-            height:40px;
+            height:30px;
             border-radius:25px;
             border: 0;
 	 text-align: center;
@@ -280,9 +353,94 @@ margin-top:158px;
         } 
 
 .form-box input[type="text"]:focus {
-    width: 400px;
+    width: 370px;
     border-color: #00bba7;
 }
+
+/*BLOQUES*/
+           
+.obras-linea{
+     display: flex;
+    justify-content: space-around;
+    list-style:none;
+}
+@media (max-width: 680px){
+	.obras-linea{
+		display: block;
+	
+	}
+.obra-uno h2{
+	font-size: 20px;
+}
+.obra-uno h4{
+	font-size: 14px;
+}   
+.obra-uno{
+	  overflow: hidden;
+  white-space: nowrap;
+  margin: 20px 20px;
+  width: 90%;
+}
+
+}
+
+.obras-linea h2 {
+    white-space: normal;
+}
+.obras-linea h4{
+text-align: center;
+white-space: normal;
+}
+.obra-uno {
+ -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  background-color: #F90;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 10px;
+  width: 20%;
+  border-radius: 10px;
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+.obra-uno img{
+    padding: 0;
+    margin: 0;
+
+}
+.overpi{
+	background-image: url("img/porta2.jpg");
+}
+
+.obra-uno:hover, .obra-uno h2:hover{
+	background-color: #00bba7;
+
+}
+.obra-uno img:hover{
+  filter: brightness(50%); // Más oscura
+  transform: scale(1.3);
+
+}
+
+
+
+.letra7{
+    color: gray;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+  text-align: center;
+white-space: normal;
+}
+
+.noti{
+     color:  hsl(0, 0%, 100%);
+    text-align: center;
+    padding: 10px;
+
+}
+
+
+
 
 /* Parte del footer */
 .pie{
@@ -290,13 +448,13 @@ margin-top:158px;
 }
 
 .pie2{
-    background: #000000;
+    background: #1C2050;
     color: white;
     padding: 20px;
 	text-align: center;
 }
 .pie1{
-	background: #363636;
+	background: #29337B;
 	display: flex;
 	justify-content: space-between;
 	color: white;
@@ -323,4 +481,139 @@ margin-top:158px;
 }
 p{
 	align-items: center;
+}
+
+
+
+
+
+
+
+
+
+/*Diseno responsive*/
+@media (max-width: 860px){
+	header{
+		flex-direction: colomn;
+	}
+
+	nav{
+		padding: 10px 0px;
+		
+	}
+	.cuadroblanco{
+		margin-top: 200px;
+	}
+	nav a{
+		font-size: 10px;
+	font-family: "Montserrat", bold;
+	color: white;
+
+	}
+   
+   .social h2 {
+	   white-space: normal;
+   }
+	.search input[type=text]{
+            width:150px;
+            height:30px;
+            border-radius:20px;
+            border: 0;
+	 text-align: center;
+    transition: 0.25s;
+	 border: 2px solid #000000;
+        }
+        .form-box input[type="text"]:focus {
+    width: 150px;
+    border-color: #00bba7;
+}
+       .search{
+            float:right;
+            margin:7px;
+			align-items: center;
+			align-content: center;
+  
+        }
+          
+        .search button{
+            background-color: #000000;
+            color: white;
+            float: right;
+            padding: 5px 10px;
+            margin-right: 16px;
+            font-size: 10px;
+            border: none;
+            cursor: pointer;
+        } 
+.sess img{
+	height: 30px;
+	margin-right: 10px;
+}
+.user{
+margin-right: 10px;
+}
+.cerrar{
+	padding-right: 10px;
+	font-size: 15px;
+    padding: 12px 16px;
+}
+}
+
+
+@media (max-width: 680px){
+	header{
+		flex-direction: colomn;
+	}
+
+	nav{
+		padding: 10px 0px;
+		
+	}
+
+	.h1{
+		font-size: 11px;
+	}
+	.user{ font-size: 14px; }
+	.cuadroblanco{
+		margin-top: 170px;
+	}
+	.cerrar{
+	padding-right: 10px;
+	font-size: 12px;
+    padding: 12px 16px;
+}
+.social{
+	display: block;
+	align-items: center;
+	text-align: center;
+
+}
+.redondo {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 20px 20px;
+  width: 90%;
+}
+.nav li a {
+	padding-right: 10px;
+	font-size: 15px;
+			}
+
+.nav li ul li ul {
+				right:-120px;
+				top:0px;
+	
+}
+
+
+
+}
+
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////
+...................para php foro..........................................
+//////////////////////////////////////provicional//////////.*/
+ .perfil-link{
+	color: black;
 }
